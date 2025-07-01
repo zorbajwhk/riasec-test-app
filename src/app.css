@@ -1,0 +1,108 @@
+:root {
+  --primary-color-light: #4a90e2;
+  --secondary-color-light: #f5a623;
+  --background-color-light: #f0f4f8;
+  --text-color-light: #333;
+  --card-background-light: #ffffff;
+
+  --primary-color-dark: #8ab4f8;
+  --secondary-color-dark: #fbbc04;
+  --background-color-dark: #202124;
+  --text-color-dark: #e8eaed;
+  --card-background-dark: #292a2d;
+
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light); /* Default text color for light mode */
+}
+
+body.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark); /* Default text color for dark mode */
+}
+
+/* Ensure all text elements inherit the body's color in dark mode */
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark h4,
+body.dark h5,
+body.dark h6,
+body.dark p,
+body.dark a,
+body.dark li,
+body.dark span,
+body.dark strong,
+body.dark em,
+body.dark .title,
+body.dark .subtitle,
+body.dark .content,
+body.dark .navbar-item,
+body.dark .tag,
+body.dark .button {
+  color: var(--text-color-dark) !important;
+}
+
+/* Specific overrides for Bulma components' backgrounds */
+.navbar.is-light {
+  background-color: var(--card-background-light);
+}
+
+body.dark .navbar.is-light {
+  background-color: var(--card-background-dark);
+}
+
+.box {
+  background-color: var(--card-background-light);
+}
+
+body.dark .box {
+  background-color: var(--card-background-dark);
+}
+
+/* Button background colors for dark mode */
+.button.is-primary {
+  background-color: var(--primary-color-light);
+}
+
+body.dark .button.is-primary {
+  background-color: var(--primary-color-dark);
+}
+
+.button.is-success {
+  background-color: var(--secondary-color-light);
+}
+
+body.dark .button.is-success {
+  background-color: var(--secondary-color-dark);
+}
+
+.button.is-danger {
+  background-color: #f14668;
+}
+
+body.dark .button.is-danger {
+  background-color: #ff6b81;
+}
+
+.tag.is-info {
+  background-color: var(--primary-color-light);
+  color: white;
+}
+
+body.dark .tag.is-info {
+  background-color: var(--primary-color-dark);
+  color: black;
+}
+
+.has-background-info-light {
+  background-color: #eff5fb;
+}
+
+body.dark .has-background-info-light {
+  background-color: #3a3b3d;
+}
