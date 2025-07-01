@@ -1,38 +1,56 @@
-# sv
+# RIASEC Test App
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Description
+The RIASEC Test App is a web application designed to help users discover their career archetypes based on the RIASEC model. By answering a series of questions about their interests, users receive personalized career recommendations aligned with their personality types.
 
-## Creating a project
+## Features
+- **Career Archetype Quiz**: An interactive quiz based on the RIASEC model.
+- **Personalized Results**: Provides top career archetypes and suggested career paths.
+- **Dark/Light Mode**: Toggle between dark and light themes for a comfortable viewing experience.
+- **Google Translate Integration**: Translate the application content into various languages.
+- **Responsive Design**: Built with Bulma CSS for a modern and responsive user interface.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Technologies Used
+- SvelteKit
+- Svelte
+- TypeScript
+- Bulma CSS
 
-```bash
-# create a new project in the current directory
-npx sv create
+## Setup and Installation
 
-# create a new project in my-app
-npx sv create my-app
-```
+To get a local copy up and running, follow these steps:
 
-## Developing
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/zorbajwhk/job-seeker.git
+    cd job-seeker
+    ```
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-```bash
-npm run dev
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+    The app will be available at `http://localhost:5173` (or another port if 5173 is in use).
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+4.  **Build for production:**
+    ```bash
+    npm run build
+    ```
 
-## Building
+## Usage
+- Navigate to the homepage to learn more about the RIASEC model.
+- Click "Take the Test" in the navigation bar to start the quiz.
+- After completing the quiz, click "View Results" to see your career archetypes and recommendations.
+- Use the "Dark Mode" / "Light Mode" button in the navigation bar to switch themes.
+- Use the Google Translate dropdown to translate the page content.
 
-To create a production version of your app:
+## Contributing
+Contributions are welcome! If you have suggestions for improvements or new features, please open an issue or submit a pull request.
 
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## License
+Distributed under the MIT License. See `LICENSE` for more information.
