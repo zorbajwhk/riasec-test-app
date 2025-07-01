@@ -17,15 +17,14 @@
 
 body {
   background-color: var(--background-color-light);
-  color: var(--text-color-light); /* Default text color for light mode */
+  color: var(--text-color-light);
 }
 
 body.dark {
   background-color: var(--background-color-dark);
-  color: var(--text-color-dark); /* Default text color for dark mode */
+  color: var(--text-color-dark);
 }
 
-/* Ensure all text elements inherit the body's color in dark mode */
 body.dark h1,
 body.dark h2,
 body.dark h3,
@@ -47,7 +46,6 @@ body.dark .button {
   color: var(--text-color-dark) !important;
 }
 
-/* Specific overrides for Bulma components' backgrounds */
 .navbar.is-light {
   background-color: var(--card-background-light);
 }
@@ -64,7 +62,6 @@ body.dark .box {
   background-color: var(--card-background-dark);
 }
 
-/* Button background colors for dark mode */
 .button.is-primary {
   background-color: var(--primary-color-light);
 }

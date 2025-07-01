@@ -5,7 +5,6 @@ export interface RiasetActivity {
     archetype: Archetype;
 }
 
-// 72 activities, 12 for each archetype, shuffled together.
 export const activities: RiasetActivity[] = [
     { text: 'Build a cabinet or furniture', archetype: 'Realistic' },
     { text: 'Study the structure of the human body', archetype: 'Investigative' },

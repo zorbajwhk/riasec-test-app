@@ -3,11 +3,11 @@
 	import { answers, result } from '$lib/stores';
 
 	function startQuiz() {
-		// Reset previous quiz results
+		
 		answers.set([]);
 		result.set(null);
 
-		// Navigate to the quiz page
+		
 		goto('/quiz');
 	}
 </script>

@@ -3,7 +3,6 @@
 	import { browser } from '$app/environment';
 	import { theme } from '$lib/stores';
 
-	
 	function googleTranslateElementInit() {
 		new (window as any).google.translate.TranslateElement(
 			{ pageLanguage: 'en' },
@@ -15,29 +14,24 @@
 		theme.update((currentTheme) => (currentTheme === 'light' ? 'dark' : 'light'));
 	}
 
-	
 	$:
 		if (browser) {
 			document.body.className = $theme;
 		}
 
 	onMount(() => {
-		
 		if (browser && !(window as any).google) {
 			const script = document.createElement('script');
 			script.type = 'text/javascript';
-			
 			script.src =
 				'//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
 			script.async = true;
 
-			
 			(window as any).googleTranslateElementInit = googleTranslateElementInit;
 
 			document.body.appendChild(script);
 		}
 
-		
 		const navbarBurger = document.querySelector('.navbar-burger');
 		if (navbarBurger) {
 			navbarBurger.addEventListener('click', () => {
@@ -99,6 +93,9 @@
 		<p>
 			Made with ❤️ by <a href="https://github.com/zorbajwhk">Zorba Jobs Wong</a>
 		</p>
+		<p>
+			&copy; {new Date().getFullYear()} RIASEC Test App. All rights reserved.
+		</p>
 	</div>
 </footer>
 
@@ -108,14 +105,11 @@
 			Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	}
 
-	/* --- Google Translate Styles --- */
 	#google_translate_element {
 		display: flex;
 		align-items: center;
 	}
 
-	/* This is a bit of a hacky way to style the Google Translate dropdown,
-	   as it's loaded in an iframe. These rules target the elements once they are loaded. */
 	:global(.goog-te-gadget-simple) {
 		border: 1px solid #ccc !important;
 		border-radius: 4px;
