@@ -44,5 +44,5 @@
 </div>
 
 <div class="has-text-centered mt-5">
-	<a class="button is-link is-large" href="/test">Take the test again</a>
+	<a class="button is-link is-large" href="/quiz">Take the test again</a>
 </div>
